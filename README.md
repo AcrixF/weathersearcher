@@ -33,4 +33,7 @@ the next URIs with a tool like CURL or POSTMAN:
     http://localhost:8080/api/weather/cities/coord/{lat}/{lon}
     Example: http://localhost:8080/api/weather/cities/coord/6.4254/79.994797
   
+  
+  TO DO secction:
+  Add Unit test for the servies.
  
