@@ -33,6 +33,11 @@ public class WeatherService {
         this.utils = utils;
     }
 
+    /**
+     *
+     * @param city_id
+     * @return
+     */
     public City getWeatherByCityId(Integer city_id) {
         City city = null;
         try {
@@ -53,6 +58,10 @@ public class WeatherService {
         return city;
     }
 
+    /**
+     * @param cityName
+     * @return
+     */
     public City getWeatherByCityName(String cityName) {
         City city = null;
         try {
@@ -73,6 +82,12 @@ public class WeatherService {
         return city;
     }
 
+    /**
+     *
+     * @param zip_code
+     * @param country_code
+     * @return
+     */
     public City getWeatherByZipCode(Long zip_code, String country_code) {
         City city = null;
         ZipCode zipCode = new ZipCode(zip_code, country_code);
@@ -94,7 +109,11 @@ public class WeatherService {
         return city;
     }
 
-
+    /**
+     * @param lat
+     * @param lon
+     * @return
+     */
     public City getWeatherByCoordinates(Double lat, Double lon) {
         City city = null;
         Coordinate coordinate = new Coordinate(lat, lon);
@@ -118,6 +137,10 @@ public class WeatherService {
     }
 
 
+    /**
+     * @param weatherResponse
+     * @return
+     */
     public WeatherResponse applyStandardResponse(WeatherResponse weatherResponse) {
         City city = weatherResponse.getCity();
 

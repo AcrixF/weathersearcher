@@ -8,6 +8,10 @@ import java.util.function.Function;
 @Component
 public class ResponseHandlerService {
 
+    /**
+     * @param <T>
+     * @return
+     */
     public <T extends RuntimeException> Function<T, City> handleRuntimeException () {
         return (e) -> {
             String error = e.getMessage();

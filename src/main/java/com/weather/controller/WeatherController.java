@@ -15,11 +15,18 @@ public class WeatherController {
 
     private WeatherService weatherService;
 
+    /**
+     * @param weatherService
+     */
     @Autowired
     public WeatherController(WeatherService weatherService) {
         this.weatherService = weatherService;
     }
 
+    /**
+     * @param city_id
+     * @return
+     */
     @GetMapping("cities/{city_id}")
     public WeatherResponse getWeatherById(@PathVariable(name = "city_id", required = true) Integer city_id ) {
         WeatherResponse weatherResponse = null;
@@ -36,6 +43,10 @@ public class WeatherController {
         return weatherResponse;
     }
 
+    /**
+     * @param city_name
+     * @return
+     */
     @GetMapping("cities/name/{city_name}")
     public WeatherResponse getWeatherByCityName(@PathVariable(name = "city_name", required = true) String city_name ) {
         WeatherResponse weatherResponse = null;
@@ -51,6 +62,11 @@ public class WeatherController {
         return weatherResponse;
     }
 
+    /**
+     * @param zip_code
+     * @param country_code
+     * @return
+     */
     @GetMapping("cities/zipcode/{zip_code}/countrycode/{country_code}")
     public WeatherResponse getWeatherByZipCode(@PathVariable(name = "zip_code", required = true) Long zip_code, @PathVariable(name = "country_code", required = true) String country_code ) {
         WeatherResponse weatherResponse = null;
@@ -65,6 +81,11 @@ public class WeatherController {
         return weatherResponse;
     }
 
+    /**
+     * @param lat
+     * @param lon
+     * @return
+     */
     @GetMapping("cities/coord/{lat}/{lon}")
     public WeatherResponse getWeatherByCoordinates(@PathVariable(name = "lat") Double lat, @PathVariable(name = "lon") Double lon ) {
         WeatherResponse weatherResponse = null;

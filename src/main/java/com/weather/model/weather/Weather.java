@@ -7,6 +7,11 @@ public class Weather {
     private String description;
     private String icon;
 
+    /**
+     * Default constructor
+     */
+    public Weather() {}
+
     public Integer getId() {
         return id;
     }

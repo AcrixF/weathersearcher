@@ -9,6 +9,11 @@ public class Sys {
     private Long sunrise;
     private Long sunset;
 
+    /**
+     * Default constructor
+     */
+    public Sys(){}
+
     public Integer getType() {
         return type;
     }

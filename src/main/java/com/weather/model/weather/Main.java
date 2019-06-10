@@ -8,6 +8,11 @@ public class Main {
     private Double temp_min;
     private Double temp_max;
 
+    /**
+     * Default constructor
+     */
+    public Main() {}
+
     public Double getTemp() {
         return temp;
     }

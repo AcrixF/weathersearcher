@@ -5,6 +5,11 @@ public class Wind {
     private Double speed;
     private Long deg;
 
+    /**
+     * Default constructor
+     */
+    public Wind() {}
+
     public Double getSpeed() {
         return speed;
     }

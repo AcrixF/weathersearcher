@@ -6,10 +6,8 @@ import com.weather.model.weather.City;
 public class WeatherResponse {
     @JsonIgnore
     private City city;
-
     private Long code;
     private String msg;
-
     private String todayDate;
     private String cityName;
     private String weatherDescription;
@@ -18,8 +16,17 @@ public class WeatherResponse {
     private String sunriseTime;
     private String sunsetTime;
 
+    /**
+     * Default Constructor
+     */
     public WeatherResponse() {}
 
+    /**
+     * Partial Constructor
+     * @param code
+     * @param msg
+     * @param city
+     */
     public WeatherResponse(Long code, String msg, City city) {
         this.code = code;
         this.city = city;

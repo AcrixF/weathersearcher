@@ -15,6 +15,9 @@ public class URLBuilder {
     private Coordinate coordinates;
     private ZipCode zip_code;
 
+    /**
+     * Default constructor
+     */
     public URLBuilder() {}
 
     public Integer getCity_Id() {
@@ -57,6 +60,11 @@ public class URLBuilder {
         private ZipCode zip_code;
 
 
+        /**
+         * Partial constructor
+         * @param weatherPath
+         * @param key_Access
+         */
         public Builder(String weatherPath, String key_Access) {
             weather_path = weatherPath;
             keyAccess = key_Access;

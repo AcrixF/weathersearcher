@@ -5,8 +5,16 @@ public class Coordinate {
     private Double lon;
     private Double lat;
 
+    /**
+     * Default constructor
+     */
     public Coordinate() {}
 
+    /**
+     * Full constructor
+     * @param lat
+     * @param lon
+     */
     public Coordinate(Double lat, Double lon ) {
         this.lat = lat;
         this.lon = lon;

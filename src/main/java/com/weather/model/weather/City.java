@@ -20,6 +20,9 @@ public class City {
     private List<Weather> weather;
     private String message;
 
+    /**
+     * Default constructor
+     */
     public City() {}
 
     public String getName() {

@@ -2,6 +2,11 @@ package com.weather.model.weather;
 
 public class Cloud {
 
+    /**
+     * Default Constructor
+     */
+    public Cloud(){}
+
     private Long all;
 
     public Long getAll() {
